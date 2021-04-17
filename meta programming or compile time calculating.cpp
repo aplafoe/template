@@ -42,7 +42,7 @@ namespace meta_function {
     inline constexpr size_t count_of_numbers_v = count_of_numbers<count>::value;
     template<int N, int firstdel = 1, int count = 1>
     struct is_simple_numeric {
-        static constexpr bool value = is_simple_numeric<N, firstdel + 1, (N% firstdel == 0 ? count + 1 : count)>::value;
+        static constexpr bool value = is_simple_numeric<N, firstdel + 1, (N % firstdel == 0 ? count + 1 : count)>::value;
     };
     template<int N, size_t count>
     struct is_simple_numeric<N, N, count> { static constexpr bool value = (count == 2? true : false); };
