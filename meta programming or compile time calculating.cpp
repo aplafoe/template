@@ -53,4 +53,5 @@ namespace meta_function {
 }
 int main() {
     using namespace meta_function;
+    return 0;
 }
